@@ -1,0 +1,17 @@
+{
+    "manifest_version":2,
+    "name":"Ads Blocker for Youtube",
+    "version":"1.0",
+    "description":"This chrome extension is built to bskip ads on Youtube",
+    "icons":{"128":"blocker.png"},
+    "permission":[
+        "activeTab",
+        "tabs"
+
+],
+    "content_scripts":[{
+        "matches":["<all_urls>"],
+        "js":["adsblocker.js"],
+        "run_at":"document_idle"
+    }]
+}
